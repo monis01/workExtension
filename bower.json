@@ -1,0 +1,13 @@
+{
+  "name": "work extension",
+  "homepage": "https://github.com/monis01/workExtension",
+  "authors": [
+    "monis"
+  ],
+  "description": "work extension",
+  "main": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jquery": "^3.1.0"
+  }
+}
