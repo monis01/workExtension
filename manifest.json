@@ -6,7 +6,7 @@
     "permissions": ["tabs", "activeTab", "storage"],
     "content_scripts": [{
         "matches": [
-            "http://workroom.finoit.com/issues/*"
+            "http://workroom.finoit.com/issues/*", "https://*/*"
         ],
         "js": ["bower_components/jquery/dist/jquery.min.js", "content_script.js"]
     }],

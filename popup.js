@@ -2,6 +2,13 @@
 $(document).ready(function() {
     var storageValue;
 
+    //@ message passing
+    /*chrome.runtime.sendMessage("Hello world", function(response) {
+        alert(response.temp);
+    });*/
+
+
+
     chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
         console.log(tabs[0].url);
 
