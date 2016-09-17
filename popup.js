@@ -24,10 +24,10 @@ $(document).ready(function() {
 
         //disabeling checkbox [will use later]
         if (tabs[0].url != 'http://workroom.finoit.com/' && !storageValue) {
-            debugger;
-            $('#awesomeCheckbox').attr("disabled", true);
-            $("#showlink").append("<p><a id='openLink' href='' target='_blank'>click here</a> to start the awesomeness</p>");
-            document.getElementById('openLink').onclick = openMe;
+           // debugger;
+           // $('#awesomeCheckbox').attr("disabled", true);
+            //$("#showlink").append("<p><a id='openLink' href='' target='_blank'>click here</a> to start the awesomeness</p>");
+            //document.getElementById('openLink').onclick = openMe;
 
         }
     });
