@@ -8,11 +8,12 @@ $(document).ready(function() {
 
 
     var x = 1;
-    var y= 0;
+    var y = 0;
 
     /* $('[name="commit"]').each(function() {
          x.push($(this).val());
      })*/
+
     $('[name="commit"]').click(function() {
         alert($(this).val());
         if ($(this).val() == "Add") {
@@ -55,17 +56,17 @@ $(document).ready(function() {
     pageInfo["bugNumber"] = $('h2').text();
 
     // console.log(pageInfo);
-   /* while (true) {
-        x++;
+    /* while (true) {
+         x++;
 
-        if (x == 9000) {
-            chrome.runtime.sendMessage({ Message: x})
-            y++;
-        }
-        if(y==20){
-            break;
-        }
-    }*/
+         if (x == 9000) {
+             chrome.runtime.sendMessage({ Message: x})
+             y++;
+         }
+         if(y==20){
+             break;
+         }
+     }*/
 
 
 })

@@ -4,9 +4,9 @@ $(document).ready(function() {
 
     //@ message passing
     /*chrome.runtime.sendMessage("Hello world", function(response) {
-        alert(response.temp);
-    });*/
-
+    console.log(response);
+});
+*/
 
 
     chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {

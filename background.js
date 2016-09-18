@@ -1,25 +1,39 @@
 //@recieveing  message
 /*chrome.runtime.onMessage.addListener(function(response, sender, sendResponse) {
     console.log(response);
-    console.log(globaVar);
-    if (globFlag) {
-        return sendResponse({ temp: globaVar });
-    } else {
-        startTimer();
-    }
+
 });*/
-
-
-var globFlag = false;
-var shouldStart = false;
-var globaVar = 0;
-
-function startTimer() {
-    if (globFlag) {
-        //return globaVar;
-    } else {
-        shouldStart = true;
-        globFlag = true;
-        setInterval(function() { globaVar++; }, 1000)
-    }
+var time = {
+    hours: 0,
+    mins: 0,
+    sec: 0,
+    dn: 'AM'
 }
+// writing a default timer
+function runTimer() {
+
+    var tempTime = new Date();
+    time.hours = tempTime.getHours();
+    time.mins = tempTime.getMinutes();
+    time.sec = tempTime.getSeconds();
+
+    if (time.hours > 12) {
+        time.dn = 'PM';
+        time.hours = time.hours - 12;
+    }
+
+    if (time.hours == 0) {
+        time.hours = 12;
+    }
+    if (time.mins <= 9) {
+        time.mins += '0' + time.mins;
+    }
+    if (time.sec <= 9) {
+        time.sec += '0' + time.sec;
+    }
+    console.log(time);
+    setTimeout(function() {
+        runTimer();
+    }, 1000);
+}
+runTimer();
